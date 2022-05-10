@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="711.0" style="-fx-background-color: ddeeff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ai_interface.Controller">
+   <children>
+      <ImageView fx:id="back" fitHeight="557.0" fitWidth="440.0" layoutX="-14.0" layoutY="-57.0">
+         <image>
+            <Image url="@../../../../java/com/example/ai_interface/images/Vector.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="40.0" layoutY="83.0" prefHeight="398.0" prefWidth="632.0" style="-fx-background-color: #ffff;">
+         <effect>
+            <DropShadow height="15.16" radius="11.46" width="32.68" />
+         </effect>
+         <children>
+            <AnchorPane fx:id="answerField" layoutX="27.0" layoutY="200.0" prefHeight="184.0" prefWidth="581.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <Text fx:id="answerHeader" layoutX="242.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Язык текста:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="answerArea" fill="RED" layoutX="243.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сербскохорватский" textAlignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="28.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Язык определен верно?">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="yesUpdate" layoutX="28.0" layoutY="134.0" mnemonicParsing="false" text="Да" />
+                  <Button fx:id="noUpdate" layoutX="78.0" layoutY="134.0" mnemonicParsing="false" text="Нет" />
+                  <AnchorPane fx:id="helpField" layoutX="222.0" layoutY="75.0" prefHeight="105.0" prefWidth="349.0">
+                     <children>
+                        <TextField fx:id="helpFieldInputLang" layoutX="44.0" layoutY="61.0" prefHeight="25.0" prefWidth="269.0" promptText="Введите название языка..." />
+                        <Text fx:id="helpFieldHeader" layoutX="46.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Помогите! Какой это язык?">
+                           <font>
+                              <Font name="Times New Roman Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <TextArea fx:id="textField" layoutX="25.0" layoutY="45.0" prefHeight="93.0" prefWidth="580.0" promptText="Текст..." />
+            <Button fx:id="defineButton" layoutX="25.0" layoutY="154.0" mnemonicParsing="false" text="Определить" />
+            <AnchorPane fx:id="changingField" layoutX="28.0" layoutY="206.0" prefHeight="168.0" prefWidth="580.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <Text fx:id="question" layoutX="22.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В тексте используются буквы кириллцы?">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="questionTitle" layoutX="170.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ответьте на несколько вопросов:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="yesButton" layoutX="224.0" layoutY="94.0" mnemonicParsing="false" text="Да" />
+                  <Button fx:id="noButton" layoutX="290.0" layoutY="94.0" mnemonicParsing="false" text="Нет / Не знаю" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Text layoutX="27.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите текст:">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="110.0" layoutY="14.0" prefHeight="40.0" prefWidth="492.0" style="-fx-background-color: ffff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Text layoutX="154.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Определитель языка" wrappingWidth="231.626220703125">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
